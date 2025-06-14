@@ -1,4 +1,7 @@
 # Loan Default Prediction – XGBoost Model + Streamlit App
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  
+[![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://your-streamlit-url.streamlit.app)
+
 
 Built a high-scale loan default prediction system on 1.3M+ LendingClub records. Includes feature-rich preprocessing, class imbalance handling, model benchmarking, and XGBoost-based deployment. A production-ready Streamlit web app allows real-time borrower risk assessment to support financial decision-making.
 
