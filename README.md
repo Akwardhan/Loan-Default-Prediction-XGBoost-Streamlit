@@ -122,6 +122,12 @@ This ML solution enables:
 ## 🔗 Dataset Reference
 
 - 📂 [LendingClub Loan Data – Kaggle](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
+---
+
+## 📌 Author
+
+**Anmol Kirtiwardhan**  
+🌐 Explore all my projects & live apps: [akwardhan.github.io](https://akwardhan.github.io)
 
 
 
