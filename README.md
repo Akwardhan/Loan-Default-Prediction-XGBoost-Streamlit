@@ -91,6 +91,9 @@ Built a clean, lightweight Streamlit app to simulate loan applications and outpu
 
 🔗 **Try the live app here:** [Loan Default Risk Predictor – Streamlit](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/)
 
+📸 ![Live Model](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Live%20Model.png)  
+📸 ![Output](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Output.png)
+
 
 📸 *(Optional Screenshot Placeholder: `screenshots/loan_app_demo.png`)*
 
