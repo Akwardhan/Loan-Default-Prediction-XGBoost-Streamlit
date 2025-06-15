@@ -85,7 +85,7 @@ Built a clean, lightweight Streamlit app to simulate loan applications and outpu
 
 ### 📈 Outputs:
 - Prediction: **Default** / **Fully Paid**
-- Default Probability: e.g., **76,43%**
+- Default Probability: e.g., **76.43%**
 
 ## 🚀 Live Streamlit App
 
