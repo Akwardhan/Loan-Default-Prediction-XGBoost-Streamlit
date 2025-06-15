@@ -1,5 +1,5 @@
 # Loan Default Prediction – XGBoost Model + Streamlit App
-[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  [![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://your-streamlit-url.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  [![Streamlit App](https://img.shields.io/badge/Live-App-green)](https://your-streamlit-url.streamlit.app) [![AWS S3](https://img.shields.io/badge/Data%20Hosted%20on-AWS%20S3-orange?logo=amazonaws&logoColor=white)](https://s3.console.aws.amazon.com/s3/object/loan-default-cleaned-dataset/cleaned_loan_data.csv)
 
 
 Built a high-scale loan default prediction system on 1.3M+ LendingClub records. Includes feature-rich preprocessing, class imbalance handling, model benchmarking, and XGBoost-based deployment. A production-ready Streamlit web app allows real-time borrower risk assessment to support financial decision-making.
@@ -122,6 +122,7 @@ This ML solution enables:
 ## 🔗 Dataset Reference
 
 - 📂 [LendingClub Loan Data – Kaggle](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
+- **Processed Cleaned Dataset**: [Hosted on AWS S3](https://s3.console.aws.amazon.com/s3/object/loan-default-cleaned-dataset/cleaned_loan_data.csv)
 ---
 
 ## 📌 Author
