@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
+st.write("Files in working directory:", os.listdir())
 
 
 model = joblib.load('loan_default_model.pkl')
