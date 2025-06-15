@@ -85,7 +85,7 @@ Built a clean, lightweight Streamlit app to simulate loan applications and outpu
 
 ### 📈 Outputs:
 - Prediction: **Default** / **Fully Paid**
-- Default Probability: e.g., **67.39%**
+- Default Probability: e.g., **76,43%**
 
 ## 🚀 Live Streamlit App
 
@@ -94,8 +94,6 @@ Built a clean, lightweight Streamlit app to simulate loan applications and outpu
 📸 ![Live Model](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Loan%20%20Fraud%20Model.png)  
 📸 ![Output](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Output%20of%20Loan%20Fraud.png)
 
-
-📸 *(Optional Screenshot Placeholder: `screenshots/loan_app_demo.png`)*
 
 ---
 
