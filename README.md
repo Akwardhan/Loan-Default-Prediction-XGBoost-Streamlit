@@ -1,5 +1,5 @@
 # Loan Default Prediction – XGBoost Model + Streamlit App
-[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  [![Live App](https://img.shields.io/badge/Streamlit-Live--App-brightgreen?logo=streamlit&logoColor=white)](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/)  [![AWS S3](https://img.shields.io/badge/Data%20Hosted%20on-AWS%20S3-orange?logo=amazonaws&logoColor=white)](https://s3.console.aws.amazon.com/s3/object/loan-default-cleaned-dataset/cleaned_loan_data.csv) [![Google Colab](https://img.shields.io/badge/Built%20With-Google%20Colab-blue?logo=googlecolab&logoColor=white)]()
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  [![Live App](https://img.shields.io/badge/Streamlit-Live--App-brightgreen?logo=streamlit&logoColor=white)](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/) [![Google Colab](https://img.shields.io/badge/Built%20With-Google%20Colab-blue?logo=googlecolab&logoColor=white)]()
 
 
 
