@@ -124,7 +124,7 @@ This ML solution enables:
 ## 🔗 Dataset Reference
 
 - 📂 [LendingClub Loan Data – Kaggle](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
-- **Processed Cleaned Dataset**: [Hosted on AWS S3](https://s3.console.aws.amazon.com/s3/object/loan-default-cleaned-dataset/cleaned_loan_data.csv)
+
 ---
 
 ## 📌 Author
