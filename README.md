@@ -1,15 +1,13 @@
-# Loan Default Prediction – XGBoost Model + Streamlit App
+# Loan Risk Analysis – 1.3M Records + Streamlit App
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  [![Live App](https://img.shields.io/badge/Streamlit-Live--App-brightgreen?logo=streamlit&logoColor=white)](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/) [![Google Colab](https://img.shields.io/badge/Built%20With-Google%20Colab-blue?logo=googlecolab&logoColor=white)]()
 
-
-
-Built a high-scale loan default prediction system on 1.3M+ LendingClub records. Includes feature-rich preprocessing, class imbalance handling, model benchmarking, and XGBoost-based deployment. A production-ready Streamlit web app allows real-time borrower risk assessment to support financial decision-making.
+Conducted **end-to-end analysis** of 1.3M+ LendingClub loan records to uncover borrower risk patterns and support safer lending. Work included **data cleaning, anomaly detection, exploratory analysis, and insight reporting**, followed by building a **Streamlit app** that allows real-time borrower risk simulation for credit teams.
 
 ---
 
 ## 📌 Objective
 
-To predict whether a borrower will **fully repay** or **default** on a loan, using key financial, credit, and application data. The goal is to reduce loan loss risk by detecting defaulters early and supporting data-backed approval workflows.
+To analyze loan applications, detect **high-risk borrowers**, and provide **data-driven recommendations** that reduce financial losses. Focus was on **cleaning, analysis, and actionable insights**, with a supportive model powering the risk simulation app.
 
 ---
 
@@ -19,8 +17,8 @@ To predict whether a borrower will **fully repay** or **default** on a loan, usi
 - **Final Size:** ~1.3M records × 86 features  
 - **Target Classes:**  
   - Fully Paid → `0`  
-  - Charged Off → `1`  
-- Dropped other statuses like "Current", "Late", "In Grace Period"
+  - Charged Off (Default) → `1`  
+- Dropped intermediate statuses like "Current", "Late", etc.
 
 ---
 
@@ -40,48 +38,23 @@ To predict whether a borrower will **fully repay** or **default** on a loan, usi
 
 ## 🛠️ Data Cleaning & Preprocessing
 
-- Removed leakage and ID-like fields (e.g., `recoveries`, `desc`, `member_id`)
-- Handled nulls using domain logic (median for `dti`, mode for `term`, etc.)
+- Removed leakage and ID-like fields (`recoveries`, `desc`, `member_id`)
+- Handled nulls using domain logic (median for `dti`, mode for `term`)
 - Dropped low-signal or high-missing-value columns
-- One-hot encoded key categorical features: `purpose`, `home_ownership`, `term`, etc.
-- Scaled numeric columns (e.g., `loan_amnt`, `int_rate`, `dti`)
-- Used `scale_pos_weight` in XGBoost to handle class imbalance (default ~20%)
+- One-hot encoded categorical features (`purpose`, `home_ownership`, `term`)
+- Scaled numeric features (`loan_amnt`, `int_rate`, `dti`)
+- Addressed class imbalance (~20% defaults) with weighting
 
 ---
 
-## 🤖 Model Training & Comparison
+## 🚀 Streamlit App – Real-Time Risk Simulation
 
-Trained and benchmarked three models to maximize recall and F1-score on **default cases (class 1)**.
-
-| Metric | Logistic Regression | Random Forest | XGBoost ✅ |
-|--------|---------------------|----------------|------------|
-| **Accuracy** | 80.1% | 79.7% | 79.7% |
-| **Precision (Class 1)** | 0.51 | 0.46 | 0.46 |
-| **Recall (Class 1)** | 0.07 ❌ | 0.09 ✅ | 0.09 ✅ |
-| **F1-Score (Class 1)** | 0.12 | 0.15 ✅ | 0.15 ✅ |
-| **True Positives** | 3,782 | 4,637 ✅ | 4,637 ✅ |
-| **False Negatives** | 49,930 ❌ | 49,075 ✅ | 49,075 ✅ |
-
-### ✅ Final Model: `XGBoostClassifier`
-
-Reasons:
-- Best balance between recall and precision for identifying defaulters
-- Fewer false negatives (TP=4,637) → better business risk control
-- Tuned with `scale_pos_weight` to handle class imbalance directly
-- Scalable, fast, and robust with large datasets (~1.3M records)
-
----
-
-
-
-## 🚀 Streamlit App – Real-Time Risk Scoring
-
-Built a clean, lightweight Streamlit app to simulate loan applications and output default risk in real time.
+Created a **dashboard-style app** in Streamlit to simulate loan applications and display borrower risk.
 
 ### 🎯 Inputs:
 - Loan Amount, Term, Annual Income  
 - FICO Score, DTI, Interest Rate  
-- Purpose, Home Ownership (via checkbox/input)
+- Purpose, Home Ownership  
 
 ### 📈 Outputs:
 - Prediction: **Default** / **Fully Paid**
@@ -89,35 +62,46 @@ Built a clean, lightweight Streamlit app to simulate loan applications and outpu
 
 ## 🚀 Live Streamlit App
 
-🔗 **Try the live app here:** [Loan Default Risk Predictor – Streamlit](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/)
+🔗 **Try the live app here:** [Loan Risk Predictor – Streamlit](https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/)
 
 📸 ![Live Model](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Loan%20%20Fraud%20Model.png)  
 📸 ![Output](https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit/blob/main/Output%20of%20Loan%20Fraud.png)
 
+---
+
+## 🤖 Supporting Model
+
+A predictive model was included to **power the app** and demonstrate how analysis can scale:
+
+| Metric | Logistic Regression | Random Forest | XGBoost ✅ |
+|--------|---------------------|----------------|------------|
+| Accuracy | 80.1% | 79.7% | 79.7% |
+| Precision (Class 1) | 0.51 | 0.46 | 0.46 |
+| Recall (Class 1) | 0.07 | 0.09 | 0.09 ✅ |
+| F1-Score (Class 1) | 0.12 | 0.15 | 0.15 ✅ |
+
+✅ **XGBoost** was chosen to reduce false negatives and provide consistent results for the risk tool.
 
 ---
 
+## 💼 Business Impact
+
+This analytics project enabled:
+
+✅ **Early identification** of high-risk borrowers  
+✅ **Data-backed loan approvals**  
+✅ Reduced **default-related revenue loss**  
+✅ A **shareable dashboard** for non-technical stakeholders  
 
 ---
 
 ## 🧠 Tools & Technologies
 
 - Python: pandas, numpy, scikit-learn, XGBoost  
-- Streamlit: real-time web app  
-- Jupyter & Google Colab: experimentation  
+- Streamlit: interactive app  
+- Jupyter & Google Colab: analysis environment  
 - Matplotlib, Seaborn: visualization  
-- Git, GitHub: version control, collaboration
-
----
-
-## 💼 Business Impact
-
-This ML solution enables:
-
-✅ Early detection of **high-risk borrowers**  
-✅ Safer loan approval workflows  
-✅ Reduced **default-related revenue loss**  
-✅ Interpretable dashboard for **non-technical stakeholders**
+- Git, GitHub: version control  
 
 ---
 
@@ -130,7 +114,4 @@ This ML solution enables:
 ## 📌 Author
 
 **Anmol Kirtiwardhan**  
-🌐 Explore all my projects & live apps: [akwardhan.github.io](https://akwardhan.github.io)
-
-
-
+🌐 Portfolio: [akwardhan.github.io](https://akwardhan.github.io)
